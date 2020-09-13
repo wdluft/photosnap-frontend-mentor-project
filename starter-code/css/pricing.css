@@ -1,0 +1,44 @@
+/* HERO */
+
+.hero__image {
+  width: 100%;
+  min-height: 294px;
+  background-image: url('../assets/pricing/mobile/hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__content {
+  position: relative;
+}
+
+.hero__content::before {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 128px;
+  background-image: var(--gradient);
+  margin-left: 1.75rem;
+}
+
+/* TABLET */
+@media screen and (min-width: 48rem) {
+  .hero__image {
+    background-image: url('../assets/pricing/tablet/hero.jpg');
+  }
+
+  .hero__content::before {
+    width: 6px;
+    height: 144px;
+    margin-left: 0;
+    margin-top: 173px;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 69rem) {
+  .hero__image {
+    background-image: url('../assets/pricing/desktop/hero.jpg');
+  }
+}
