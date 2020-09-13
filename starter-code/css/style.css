@@ -40,6 +40,8 @@ body {
   font-family: var(--font);
   font-size: var(--baseText);
   line-height: var(--baseLineHeight);
+  color: var(--black);
+  background: var(--white);
 }
 
 h1,
@@ -72,6 +74,10 @@ h4 {
   line-height: var(--smallLineHeight);
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+p {
+  color: rgba(0, 0, 0, 60%);
 }
 
 img {
@@ -152,12 +158,39 @@ button:hover,
   color: var(--white);
 }
 
+.lightCard p {
+  color: rgba(255, 255, 255, 60%);
+}
+
+.darkCard p {
+  color: rgba(255, 255, 255, 60%);
+}
+
+.offsetSplit__heading {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 3.33px;
+  margin-bottom: 1rem;
+}
+
+.offsetSplit__description {
+  margin-bottom: 1.5rem;
+}
+
 /* SPACING */
 .container {
   max-width: 69rem;
   margin: 0 auto;
   padding: var(--paddingTop) var(--paddingRight) var(--paddingBottom)
     var(--paddingRight);
+}
+
+.offsetSplit__content--left > .container,
+.offsetSplit__content--right > .container {
+  --paddingTop: 4.5rem;
+  --paddingBottom: 4.5rem;
+  --paddingLeft: 1.75rem;
+  --paddingRight: 1.75rem;
 }
 
 /* TABLET */
@@ -168,6 +201,52 @@ button:hover,
     --paddingTop: 4rem;
     --paddingBottom: 4rem;
   }
+
+  .offsetSplit__content--left > .container,
+  .offsetSplit__content--right > .container {
+    --paddingTop: 10.75rem;
+    --paddingBottom: 10.75rem;
+    --paddingLeft: 3.375rem;
+    --paddingRight: 3.375rem;
+  }
+
+  .offsetSplit--left {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .offsetSplit__content--left {
+    grid-row: 1;
+    grid-column: 1/2;
+  }
+
+  .offsetSplit__image--left {
+    grid-column: 2/3;
+  }
+
+  .offsetSplit--right {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .offsetSplit__content--right {
+    grid-column: 2/3;
+  }
+
+  .offsetSplit__image--right {
+    grid-column: 1/2;
+  }
+
+  .offsetSplit__heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 4.17px;
+    margin-bottom: 1.25rem;
+  }
+
+  .offsetSplit__description {
+    margin-bottom: 3rem;
+  }
 }
 
 /* DESKTOP */
@@ -175,5 +254,19 @@ button:hover,
   .container {
     --paddingLeft: 0;
     --paddingRight: 0;
+  }
+
+  .offsetSplit__content--left > .container,
+  .offsetSplit__content--right > .container {
+    --paddingLeft: 7rem;
+    --paddingRight: 7rem;
+  }
+
+  .offsetSplit--left {
+    grid-template-columns: 42% 58%;
+  }
+
+  .offsetSplit--right {
+    grid-template-columns: 58% 42%;
   }
 }

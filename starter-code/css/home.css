@@ -1,0 +1,86 @@
+/* HERO */
+
+.hero__image {
+  width: 100%;
+  min-height: 294px;
+  background-image: url('../assets/home/mobile/create-and-share.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__content {
+  position: relative;
+}
+
+.hero__content::before {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 128px;
+  background-image: var(--gradient);
+  margin-left: 1.75rem;
+}
+
+/* BEAUTIFUL STORIES */
+.beautifulStories__image {
+  width: 100%;
+  min-height: 294px;
+  background-image: url('../assets/home/mobile/beautiful-stories.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* DESIGN FOR ALL */
+.designForAll__image {
+  width: 100%;
+  min-height: 294px;
+  background-image: url('../assets/home/mobile/designed-for-everyone.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* TABLET */
+@media screen and (min-width: 48rem) {
+  .hero__image {
+    background-image: url('../assets/home/tablet/create-and-share.jpg');
+  }
+
+  .hero__content::before {
+    width: 6px;
+    height: 304px;
+    margin-left: 0;
+    margin-top: 173px;
+  }
+
+  .beautifulStories__image {
+    background-image: url('../assets/home/tablet/beautiful-stories.jpg');
+  }
+
+  .designForAll__image {
+    background-image: url('../assets/home/tablet/designed-for-everyone.jpg');
+  }
+
+  .beautifulStories__content > .container,
+  .designForAll__content > .container {
+    --paddingTop: 8.5rem;
+    --paddingBottom: 8.5rem;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 69rem) {
+  .hero__image {
+    background-image: url('../assets/home/desktop/create-and-share.jpg');
+  }
+
+  .beautifulStories__image {
+    background-image: url('../assets/home/desktop/beautiful-stories.jpg');
+  }
+
+  .designForAll__image {
+    background-image: url('../assets/home/desktop/designed-for-everyone.jpg');
+  }
+}
