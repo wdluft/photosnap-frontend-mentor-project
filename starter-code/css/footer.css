@@ -1,0 +1,143 @@
+footer {
+  text-align: center;
+}
+
+.footer__logo {
+  margin-bottom: 2rem;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.footer__socialLink {
+  margin-right: 0.875rem;
+  height: 20px;
+}
+
+.footer__socialLink:last-child {
+  margin-right: 0;
+}
+
+.footer__socialLink > svg > path {
+  fill: var(--white);
+  transition: var(--transition);
+}
+
+/* Color svgs on hover based on social */
+.footer__socialLink:hover > svg > .facebook {
+  fill: url(#fb);
+}
+
+.footer__socialLink:hover > svg > .youtube {
+  fill: url(#youtube);
+}
+
+.footer__socialLink:hover > svg > .twitter {
+  fill: url(#twitter);
+}
+
+.footer__socialLink:hover > svg > .pinterest {
+  fill: url(#pinterest);
+}
+
+.footer__socialLink:hover > svg > .instagram {
+  fill: url(#instagram);
+}
+
+.footer__siteLinks {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7.5rem;
+}
+
+.footer__siteLink {
+  margin-bottom: 1.125rem;
+}
+
+.footer__siteLink:last-child {
+  margin-bottom: 0;
+}
+
+.footer__cta {
+  margin-bottom: 2.125rem;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 50%);
+}
+
+/* TABLET */
+@media screen and (min-width: 48rem) {
+  footer {
+    text-align: left;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-areas:
+      'logo cta'
+      'siteLinks .'
+      '. .'
+      'socials copyright';
+    grid-gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    grid-area: logo;
+    margin-bottom: 0;
+  }
+
+  .footer__socials {
+    grid-area: socials;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .footer__siteLinks {
+    grid-area: siteLinks;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .footer__siteLink {
+    margin-right: 1.625rem;
+    margin-bottom: 0;
+  }
+
+  .footer__cta {
+    grid-area: cta;
+    margin-bottom: 0;
+    margin-right: 1rem;
+    justify-self: end;
+  }
+
+  .footer__copyright {
+    grid-area: copyright;
+    justify-self: end;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 64rem) {
+  .footer__container {
+    grid-template-areas:
+      'logo siteLinks . . cta'
+      '. siteLinks . . .'
+      'socials siteLinks . . copyright';
+  }
+
+  .footer__siteLinks {
+    flex-direction: column;
+  }
+
+  .footer__siteLink {
+    margin-right: 0;
+    margin-bottom: 1.125rem;
+  }
+}
